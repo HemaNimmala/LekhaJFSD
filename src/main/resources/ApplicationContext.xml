@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+      
+     <bean id="empbean" class="com.klef.jfsd.exam.Employee">
+    <constructor-arg value="1"></constructor-arg>
+    <constructor-arg value="Lekha"></constructor-arg>
+    <constructor-arg value="90000"></constructor-arg>
+    <constructor-arg value="true"></constructor-arg>
+    <constructor-arg>
+    <list>
+    <value>Sping Boot</value>
+    <value>REACT JS</value>
+    </list>
+    </constructor-arg>
+    </bean>
+    
+    <bean id="coursebean" class="com.klef.jfsd.exam.Course">
+    <property name="id" value="27"></property>
+    <property name="name" value="JFSD"></property>
+    <property name="credits" value="3.0"></property>
+    <property name="instructor" ref="instructorbean"></property>
+    </bean>
+    
+    <bean id="instructorbean" class="com.klef.jfsd.exam.Instructor">
+    <property name="id" value="6789"></property>
+    <property name="name" value="Lokesh"></property>
+    <property name="email" value="lokesh@gmail.com"></property>
+    <property name="phno" value="8097654321"></property>
+    </bean>     
+</beans>
